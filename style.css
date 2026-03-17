@@ -1,0 +1,258 @@
+/* RESET */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 18px;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* LEFT SIDE */
+.ham-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hamburger{
+    cursor: pointer;
+}
+
+/* RIGHT SIDE */
+.cart-vatar{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart-vatar-img-cont{
+    width: 24px;
+}
+
+.cart-vatar-img-cont img{
+    width: 100%;
+    cursor: pointer;
+}
+
+/* NAV OVERLAY (FULL SCREEN) */
+.nav-container{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    z-index: 1000;
+    transition: 0.5s ease;
+}
+
+.nav-container.active{
+    left: 0;
+}
+
+
+.nav{
+    width: 250px;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 80px 20px 20px;
+    position: relative;
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.close{
+    width: 18px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+/*One*/
+
+.one{
+    position: relative;
+}
+
+.one-img{
+    width: 100%;
+}
+
+
+.previous,
+.next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.previous{
+    left: 20px;
+}
+
+.next{
+    right: 20px;
+}
+
+.previous:active{
+    opacity: 0.5;
+}
+
+.next:active{
+    opacity: 0.5;
+}
+
+/*two*/
+
+.two{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px 6px 20px;
+}
+
+.two-head{
+    color: gray;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.two h2{
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 1.8em;
+}
+
+.two p{
+    color: gray;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.two-flex{
+    display: flex;
+    flex-direction: row;
+    gap: 80%;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.two-flex-div{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.one-two-five{
+    padding: 5px 8px;
+    font-size: 1.8;
+    font-weight: 900;
+}
+
+.fifty{
+    color: white;
+    background: black;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.two-fifty{
+    padding: 5px 8px;
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+
+
+/*three*/
+
+.three{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto 20px auto;
+}
+
+.plus-minus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(223, 64%, 98%);
+    width: 100%;
+    padding: 15px;
+    border-radius: 9px;
+}
+
+.plus-minus p{
+    font-weight: 900;
+}
+
+.add-cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: hsl(26, 100%, 55%);
+    padding: 15px 0;
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all ease 0.15s;
+}
+
+.add-cart:hover{
+    opacity: 0.9;
+}
+
+.add-cart:active{
+    opacity: 0.5;
+}
+
+.plus-minus img{
+    cursor: pointer;
+}
+
+.plus-minus img:active{
+    opacity: 0.6;
+}
+
+.attribution{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.attribution a{
+    text-decoration: none;
+    color: black;
+}
