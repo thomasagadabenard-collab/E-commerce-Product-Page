@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <header>
+  <header class="heading">
     <div class="desktop-nav">
       <div class="ham-logo">
         <img src="images/icon-menu.svg" alt="hamburger" class="hamburger">
@@ -30,8 +30,9 @@
     </div>
 
     <div class="cart-vatar">
-      <div class="cart-vatar-img-cont">
-        <img src="images/icon-cart.svg" alt="cart">
+      <div class="cart-vatar-img-cont" id="cart-absolute">
+        <img src="images/icon-cart.svg" alt="cart" class="cart">
+        <span class="cart-count">0</span>
       </div>
 
       <div class="cart-vatar-img-cont">
@@ -88,11 +89,11 @@
 
       <section class="three">
         <div class="plus-minus">
-            <img src="images/icon-minus.svg" alt="minus">
+            <img src="images/icon-minus.svg" alt="minus" class="minus">
 
-            <p>0</p>
+            <p class="count"></p>
 
-            <img src="images/icon-plus.svg" alt="plus">
+            <img src="images/icon-plus.svg" alt="plus" class="plus">
           </div>
 
           <div class="add-cart">
@@ -109,6 +110,27 @@
     Coded by <a href="#">Thomas Benard</a>.
   </div>
 
+  <!--<div class="cart-container-one">
+    <h4 class="cart-container-one-h4">Cart</h4>
+    <p class="cart-container-one-paragraph">Your cart is empty</p>
+  </div>-->
+
+  <!--<div class="cart-container-two">
+    <div class="cart-width">
+      <h4 class="cart-container-one-h4">Cart</h4>
+        <div class="cart-container-two-grid">
+          <img src="images/image-product-1-thumbnail.jpg" alt="product" class="cart-grid-img">
+          <div>
+            <small>Fall Limited Edition Sneakers <br> $125.000 x <span class="cart-amount">3</span> <span class="dollar">$</span><span class="total">375</span><span class="remainder">.00</span></small>
+          </div>
+          <img src="images/icon-delete.svg" alt="delete" class="delete">
+        </div>
+        <p class="checkout">Checkout</p>
+      </div>
+  </div>-->
+
+  <div class="cart-display"></div>
+  
   <script src="main.js"></script>
 </body>
 </html>

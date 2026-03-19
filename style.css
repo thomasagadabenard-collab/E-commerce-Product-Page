@@ -15,6 +15,8 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
+    position: relative;
+    border-bottom: 2px solid hsl(219, 9%, 45%);
 }
 
 /* LEFT SIDE */
@@ -43,6 +45,23 @@ header{
     width: 100%;
     cursor: pointer;
 }
+
+#cart-absolute{
+    position: relative;
+}
+
+.cart-count{
+    position: absolute;
+    background: orange;
+    padding: 4px;
+    border-radius: 50%;
+    top: -15px;
+    right: -8px;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+
 
 /* NAV OVERLAY (FULL SCREEN) */
 .nav-container{
@@ -343,3 +362,112 @@ header{
     .one-grid img:active{
         opacity: 0.4;
     }
+
+.cart-container-one{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    width: 400px;
+    height: 250px;
+    box-shadow: 0 0 10px rgb(153, 152, 152, 0.5);
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    z-index: 200;
+    background: white;
+}
+
+.cart-container-one h4{
+    border-bottom: 1px hsl(219, 9%, 45%) solid;
+    padding: 20px;
+}
+
+.cart-container-one p{
+    align-self: center;
+    margin: auto 2px;
+}
+
+.cart-container-two{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    width: 400px;
+    height: 250px;
+    box-shadow: 0 0 10px rgb(153, 152, 152, 0.5);
+    position: absolute;
+    top: 70px;
+    right: 50px;    
+    z-index: 200;
+    background: white;
+}
+
+.cart-container-two h4{
+    border-bottom: 1px hsl(219, 9%, 45%) solid;
+    padding: 20px;
+}
+
+.cart-container-two-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.cart-grid-img{
+    width: 70px;
+    border-radius: 6px;
+}
+
+.cart-width{
+    width: 100%;
+    margin: 2px auto;
+}
+
+.checkout{
+    background: hsl(26, 100%, 55%);
+    font-weight: 900;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    width: 90%;
+    margin: 2px auto;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.checkout:hover{
+    opacity: 0.7;
+}
+
+.checkout:active{
+    opacity: 0.4;
+}
+
+.dollar, .total, .remainder{
+    font-weight: 900;
+    color: black;
+    font-size: 1.4em;
+}
+
+.cart-container-two-grid small{
+    color: hsl(219, 9%, 45%);
+}
+
+.delete{
+    cursor: pointer;
+}
+
+.delete:active{
+    opacity: 0.4;
+}
+
+@media(max-width: 768px){
+    .cart-container-one{
+        right: 20px;
+    }
+    .cart-container-two{
+        right: 20px;
+    }
+}
