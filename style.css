@@ -354,7 +354,7 @@ header{
 
     .one-grid img:hover{
         filter: brightness(80%);
-        border: 2px red solid;
+        border: 2px hsl(26, 100%, 55%) solid;
         opacity: 0.7;
         transform: scale(1.1);
     }
