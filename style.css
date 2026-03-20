@@ -19,7 +19,7 @@ header{
     border-bottom: 2px solid hsl(219, 9%, 45%);
 }
 
-/* LEFT SIDE */
+
 .ham-logo{
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@ header{
     cursor: pointer;
 }
 
-/* RIGHT SIDE */
+
 .cart-vatar{
     display: flex;
     align-items: center;
@@ -50,6 +50,11 @@ header{
     position: relative;
 }
 
+.avatar:hover{
+    border: 2px solid hsl(26, 100%, 55%);
+    border-radius: 50%;
+}
+
 .cart-count{
     position: absolute;
     background: orange;
@@ -61,9 +66,6 @@ header{
     margin-top: 4px;
 }
 
-
-
-/* NAV OVERLAY (FULL SCREEN) */
 .nav-container{
     position: fixed;
     top: 0;
@@ -149,11 +151,20 @@ header{
 
 .one{
     position: relative;
+    overflow: hidden;
 }
 
-.one-img{
+.slide{
     width: 100%;
+    
+    display: none; 
+    object-fit: cover;
 }
+
+.slide.active {
+  display: block; 
+}
+
 
 
 .previous,
@@ -182,6 +193,10 @@ header{
 .next:active{
     opacity: 0.5;
 }
+
+
+
+
 
 /*two*/
 
@@ -332,19 +347,22 @@ header{
         display: none;
     }
 
-    .one-img{
+    .slide{
         border-radius: 15px;
     }
 
     .one-grid{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        display: flex;
+        flex-direction: row;
+        /*grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));*/
+        justify-content: space-around;
+        align-items: center;
         width: 100%;
         margin: 10px auto;
-        gap: 20px;
+        gap: 10px;
     }
 
-    .one-grid img{
+    .thumb{
         width: 100px;
         border-radius: 8px;
         cursor: pointer;
@@ -352,14 +370,14 @@ header{
     }
     }
 
-    .one-grid img:hover{
+    .thumb:hover{
         filter: brightness(80%);
         border: 2px hsl(26, 100%, 55%) solid;
         opacity: 0.7;
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 
-    .one-grid img:active{
+    .thumb:active{
         opacity: 0.4;
     }
 
@@ -471,3 +489,4 @@ header{
         right: 20px;
     }
 }
+
